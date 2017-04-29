@@ -1,4 +1,4 @@
-# README
+# Rails 5 First Application
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
