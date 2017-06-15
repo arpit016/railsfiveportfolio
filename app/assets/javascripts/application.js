@@ -19,4 +19,5 @@
 //= require moment.min
 //= require nouislider.min
 //= require now-ui-kit
+//= require custom
 //= require_tree .

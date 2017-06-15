@@ -1513,8 +1513,8 @@ textarea.form-control:focus, textarea.form-control:active {
   font-size: 0.8571em;
   text-transform: uppercase; }
 .progress-container .progress {
-  height: 1px;
-  border-radius: 0;
+  height: 5px;
+  border-radius: 5px;
   box-shadow: none;
   background: rgba(222, 222, 222, 0.5);
   margin-top: 14px; }
