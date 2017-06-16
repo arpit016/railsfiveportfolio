@@ -4,7 +4,10 @@
 
 ### Features
 
-- Real time chat engine for Comments
+
+- About Me
+- Disqus
 - Blog
 - Portfolio
 - Drag and Drop interface for Portfolio gallery
+- Remove the unnecessary images from the assets folder when going live
