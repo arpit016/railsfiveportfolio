@@ -13,7 +13,6 @@
 //= require jquery
 //= require tether.min
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap.min
 //= require bootstrap-switch
 //= require moment.min
