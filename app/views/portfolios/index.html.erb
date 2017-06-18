@@ -62,7 +62,9 @@
                         <div class="content">
                           <div class="main text-center">
                               <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
-                              <%= link_to "View More", portfolio_item, class: "btn btn-primary btn-round btn-lg" %>
+                              <%= link_to "Show", portfolio_item, class: "link-separator btn btn-primary btn-round" %>
+                              <%= link_to "Edit", edit_portfolio_path(portfolio_item), class: "link-separator btn btn-primary btn-round" %>
+                              <%= link_to "Delete", portfolio_path(portfolio_item), method: :delete, data: { confirm: "Are you sure?" }, class: "link-separator btn btn-primary btn-round" %>
                           </div>
                         </div>
                       </div>
