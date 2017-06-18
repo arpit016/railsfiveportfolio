@@ -16,7 +16,11 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
+    <% if controller_name === "portfolios" && action_name === "new"%>
+      <%= render 'layouts/navbar' %>
+    <% else %>
+      <%= render 'layouts/transparentnavbar' %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

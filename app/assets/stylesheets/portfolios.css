@@ -287,6 +287,37 @@ body {
 */
 /*       Fix bug for IE      */
 
+
+.form-signup {
+  margin: 0 auto;
+  margin-top: 15%;}
+.form-signup .header {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 30px 0; }
+.form-signup .text-divider {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-align: center; }
+.form-signup .content {
+  padding: 0px 30px; }
+.form-signup .checkbox {
+  margin-top: 20px; }
+.form-signup .checkbox label {
+  margin-left: 17px; }
+.form-signup .checkbox .checkbox-material {
+  padding-right: 12px; }
+.form-signup .social-line {
+  margin-top: 20px;
+  text-align: center; }
+.form-signup .social-line .btn.btn-icon, .form-signup .social-line .btn.btn-icon .btn-icon -mini {
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.2); }
+.form-signup .footer {
+  margin-bottom: 10px;
+  margin-top: 24px; }
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .portfolio-front, .portfolio-back{
         -ms-backface-visibility: visible;
