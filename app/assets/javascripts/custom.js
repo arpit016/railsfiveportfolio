@@ -7,3 +7,16 @@ $(document).bind("scroll", function() {
        });
    }
 });
+
+$(document).on("ready", function() {
+   
+   $(".modal").on("shown.bs.modal",function() {
+      $(".main").append('<div class="main-backdrop fade show"></div>');
+      $(".fixed-top").css("z-index", "1");
+   });
+   
+   $(".modal").on("hidden.bs.modal",function(){
+      $(".main-backdrop").remove();
+      $(".fixed-top").css("z-index", "1030");
+   });
+});

@@ -331,6 +331,35 @@ body {
     color: #FFFFFF;
 }
 
+.modal-backdrop {
+    z-index: 2;
+}
+
+.main-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.main-backdrop.show {
+    opacity: .5;
+}
+
+.main-backdrop.fade {
+    opacity: .5;
+}
+
+.modal.show .modal-dialog {
+  -webkit-transform: translate(0, 5%);
+  -o-transform: translate(0, 5%);
+  transform: translate(0, 5%); 
+    
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .portfolio-front, .portfolio-back{
         -ms-backface-visibility: visible;
