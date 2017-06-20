@@ -1,0 +1,28 @@
+<div class= "container">
+  <div class="row">
+    <div class="card form-signup" data-background-color="orange">
+        <%= form_for(@portfolio_item, html: {class: "form" }) do |f| %>
+          
+          <div class="header header-primary text-center">
+              <h4 class="title title-up"><%= "#{action_name}" %> Project</h4>
+          </div>
+          <div class="content">
+            <div class="input-group form-group-no-border">       
+              <%= f.text_field :title, :class => 'form-control', :placeholder => 'Title', autofocus: true %>
+            </div>
+          
+            <div class="input-group form-group-no-border">        
+              <%= f.text_field :subtitle, :class => 'form-control', :placeholder => 'Subtitle' %>
+            </div>
+          
+            <div class="input-group form-group-no-border">        
+              <%= f.text_area :body, :class => 'form-control', :placeholder => 'Description', :rows => "5" %>
+            </div>
+          </div>
+          <div class="footer text-center">
+              <%= f.submit class: "btn btn-neutral btn-round btn-lg" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
