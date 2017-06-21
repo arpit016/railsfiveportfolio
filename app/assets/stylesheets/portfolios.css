@@ -338,6 +338,10 @@ body {
     text-decoration: none;
 }
 
+a:focus, i:focus{
+    outline: none;
+}
+
 
 .modal-backdrop {
     z-index: 2;
