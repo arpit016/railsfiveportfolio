@@ -8,6 +8,7 @@ $(document).bind("scroll", function() {
    }
 });
 
+
 $(document).on("ready", function() {
    
    $(".modal").on("shown.bs.modal",function() {
@@ -19,6 +20,7 @@ $(document).on("ready", function() {
       $(".main-backdrop").remove();
       $(".fixed-top").css("z-index", "1030");
    });
+   
 });
 
 function rotateCard(btn){
