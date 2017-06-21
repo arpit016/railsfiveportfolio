@@ -20,3 +20,13 @@ $(document).on("ready", function() {
       $(".fixed-top").css("z-index", "1030");
    });
 });
+
+function rotateCard(btn){
+        var $card = $(btn).closest('.portfolio-card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+    }

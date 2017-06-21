@@ -318,6 +318,7 @@ body {
   margin-bottom: 10px;
   margin-top: 24px; }
 
+/*
 .link-separator {
     border-width: 1px;
     border-radius: 30px !important;
@@ -330,6 +331,13 @@ body {
     background-color: #f96332;
     color: #FFFFFF;
 }
+*/
+
+.link-separator{
+    color: #f96332;
+    text-decoration: none;
+}
+
 
 .modal-backdrop {
     z-index: 2;
