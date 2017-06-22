@@ -21,6 +21,10 @@ $(document).on("ready", function() {
       $(".fixed-top").css("z-index", "1030");
    });
    
+   if ( $(window).width() < 1025 ){
+       $('.portfolio-card-container').addClass('manual-flip')
+   }
+   
 });
 
 function rotateCard(btn){
@@ -32,3 +36,14 @@ function rotateCard(btn){
             $card.addClass('hover');
         }
     }
+    
+/*
+$( window ).resize(function() {
+  if ( $(window).width() < 1025 ){
+       $('.portfolio-card-container').addClass('manual-flip')
+   }
+   else {
+       $('.portfolio-card-container').removeClass('manual-flip')
+   }
+});
+*/
