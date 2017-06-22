@@ -23,6 +23,7 @@ $(document).on("ready", function() {
    
    if ( $(window).width() < 1025 ){
        $('.portfolio-card-container').addClass('manual-flip')
+       $('.after').after('<a onclick="rotateCard(this)" role="button"><i class="fa fa-reply fa-lg fa-fw link-separator" rel="tooltip" title="Turn Around"></i></a>');
    }
    
 });
