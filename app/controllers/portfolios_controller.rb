@@ -1,8 +1,10 @@
 class PortfoliosController < ApplicationController
+    before_action :authenticate_user!, except: [:show, :index]
     before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+    access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
     
     def index
-      @portfolio_items = Portfolio.includes(:technologies)
+      @portfolio_items = Portfolio.includes(:technologies, :user)
     end
     
     def new
@@ -11,6 +13,7 @@ class PortfoliosController < ApplicationController
     
     def create
       @portfolio_item = Portfolio.new(portfolio_params)
+      @portfolio_item.user = current_user.id
   
       respond_to do |format|
         if @portfolio_item.save
