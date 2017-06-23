@@ -19,4 +19,5 @@
 //= require nouislider.min
 //= require now-ui-kit
 //= require custom
+//= require cocoon
 //= require_tree .

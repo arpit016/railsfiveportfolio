@@ -290,7 +290,9 @@ body {
 
 .form-signup {
   margin: 0 auto;
-  margin-top: 15%;}
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
 .form-signup .header {
   margin-left: 20px;
   margin-right: 20px;
@@ -370,6 +372,14 @@ a:focus, i:focus{
   -o-transform: translate(0, 5%);
   transform: translate(0, 5%); 
     
+}
+
+.portfolio-cocoon {
+    padding-top: 7px;
+}
+
+.cocoon-link a {
+    text-decoration: none;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
