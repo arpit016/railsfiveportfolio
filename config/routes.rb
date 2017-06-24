@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_up: 'register', sign_in: 'login', sign_out: 'logout'}, skip: [:registrations]
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout'}, skip: [:registrations]
   resources :portfolios
   root 'pages#home'
 
@@ -13,4 +13,6 @@ Rails.application.routes.draw do
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  get '*path' => redirect('/')
 end
