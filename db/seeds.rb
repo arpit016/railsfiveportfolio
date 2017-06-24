@@ -19,7 +19,7 @@ end
        title: "Project #{portfolio_item}",
        subtitle: "Web app Service",
        body: "Donec facilisis blandit congue. Nullam consequat eget ex eu egestas. Curabitur porttitor aliquet efficitur. Quisque vel dictum dui. Aliquam dui nisl, facilisis vel convallis at, cursus nec diam. Aenean dapibus, nunc non lobortis mattis, ante libero hendrerit dui, a tincidunt velit diam sed ante. Sed ultricies mollis urna volutpat tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed egestas, tellus id mollis vehicula, mi turpis elementum libero, sed pellentesque odio nulla non ligula.",
-       main_image: "http://via.placeholder.com/600x400",
+       main_image: "http://via.placeholder.com/800x420",
        thumb_image: "http://via.placeholder.com/350x200"
        ) 
 end

@@ -374,8 +374,33 @@ a:focus, i:focus{
     
 }
 
+.custom-color {
+    color: #f96332;
+}
+
+.portfolio-description p {
+    margin-top: 20px;
+    line-height: 1.9em;
+    text-align: justify;
+}
+
+.technology_section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.technology_section .technology {
+    margin-top: 6px;    
+}
+
 .portfolio-cocoon {
     padding-top: 7px;
+}
+
+.close-button {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding: 15px 48px !important;
 }
 
 .cocoon-link a {
