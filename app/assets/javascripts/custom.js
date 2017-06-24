@@ -28,7 +28,7 @@ $(document).on("ready", function() {
         $('.after').after('<a onclick="rotateCard(this)" role="button"><i class="fa fa-reply fa-lg fa-fw link-separator" rel="tooltip" title="Turn Around"></i></a>');
        } else {
            $('.after-show').after('<a onclick="rotateCard(this)" role="button"><i class="fa fa-reply fa-lg fa-fw link-separator" rel="tooltip" title="Turn Around"></i></a>');
-           $('.after-read').after('<a onclick="rotateCard(this)" role="button" class="btn btn-primary btn-round mobile-link">Turn</a>');
+           $('.after-read').after('<a onclick="rotateCard(this)" role="button" class="btn btn-primary btn-round link-separator mobile-link"><i class="fa fa-reply fa-lg fa-fw"></i> Turn</a>');
        }
    }
    
