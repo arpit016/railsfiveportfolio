@@ -65,9 +65,9 @@
                           <div class="main text-center">
                               <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
                               <% if user_signed_in? %>
-                                <%= link_to '<i class="fa fa-eye fa-lg fa-fw"></i>'.html_safe, "#myModal_#{portfolio_item.id}", { :class => 'link-separator social-links after-show', 'data-toggle' => 'modal', 'rel' => 'tooltip', 'title' => 'Show' } %>
+                                <%= link_to '<i class="fa fa-eye fa-lg fa-fw"></i>'.html_safe, "#myModal_#{portfolio_item.id}", { :class => 'link-separator social-links after-login', 'data-toggle' => 'modal', 'rel' => 'tooltip', 'title' => 'Show' } %>
                               <% else %>
-                                <%= link_to "Read", "#myModal_#{portfolio_item.id}", { :class => 'btn btn-primary btn-lg btn-round', 'data-toggle' => 'modal' } %>
+                                <%= link_to "Read", "#myModal_#{portfolio_item.id}", { :class => 'btn btn-primary btn-round after-read', 'data-toggle' => 'modal' } %>
                               <% end %>
                               <%= link_to '<i class="fa fa-pencil-square fa-lg fa-fw"></i>'.html_safe, edit_portfolio_path(portfolio_item), { :class => 'link-separator social-links', 'rel' => 'tooltip', 'title' => 'Edit' } if logged_in?(:site_admin) %>
                               <%= link_to '<i class="fa fa-trash fa-lg fa-fw"></i>'.html_safe, portfolio_path(portfolio_item), method: :delete, data: { confirm: "Are you sure?" }, class: "link-separator social-links after", :rel => "tooltip", "title" => "Delete" if logged_in?(:site_admin) %>

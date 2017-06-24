@@ -407,6 +407,10 @@ a:focus, i:focus{
     text-decoration: none;
 }
 
+.mobile-link {
+    color: #fff;
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .portfolio-front, .portfolio-back{
         -ms-backface-visibility: visible;
