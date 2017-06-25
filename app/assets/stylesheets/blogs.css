@@ -1,3 +1,7 @@
+body {
+	background-color: #E3E3E3;
+}
+
 .main-raised {
     margin: -60px 30px 0;
     border-radius: 6px;
