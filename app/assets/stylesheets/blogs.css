@@ -428,9 +428,7 @@ a:focus, i:focus{
     margin-top: 6px;    
 }
 
-.blog-cocoon {
-    padding-top: 7px;
-}
+
 
 .close-button {
     padding-left: 0px !important;
@@ -438,16 +436,20 @@ a:focus, i:focus{
     padding: 15px 48px !important;
 }
 
-.cocoon-link a {
-    text-decoration: none;
-}
+
 
 .mobile-link {
     color: #fff !important;
     margin-left: 10px !important;
 }
 
+.blog-description{
+    margin-top: 60px;
+}
 
+.blog-space{
+    margin-top: 20px;
+}
 
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
