@@ -14,8 +14,8 @@
     <div class="row text-center">
       <div class="col-md-12 category_section">
         <% @technologies.each do |technology| %>
-          <%= link_to "#{technology.name}", blogs_path(lang: technology.name), class: "btn btn-primary btn-simple btn-round btn-category"%>
-        <!--  <button type="button" class="btn btn-primary btn-simple btn-round btn-category"> <%= technology.name %> </button> -->
+          <%= link_to "#{technology.name}", "#", class: "btn btn-primary btn-simple btn-round btn-category"%>
+        <!-- Use this in above statement when category is added "blogs_path(lang: technology.name)"  <button type="button" class="btn btn-primary btn-simple btn-round btn-category"> <%= technology.name %> </button> -->
         <% end %>
       </div>
     </div>

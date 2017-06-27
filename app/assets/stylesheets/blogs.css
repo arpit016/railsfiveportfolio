@@ -408,16 +408,12 @@ a:focus, i:focus{
 .category_section a, .category-section a:focus, .category-section a:visited{
     margin-top: 10px;
     text-decoration: none;
-    padding: 13px; 
 }
 
 
 
 .category_section a:hover{
     text-decoration: none;
-    padding: 13px;
-    border-radius: 30px;
-    background-color: #eceeef;
 }
 
 .category_section a.active, .category_section .active, .category-section .active:hover{
