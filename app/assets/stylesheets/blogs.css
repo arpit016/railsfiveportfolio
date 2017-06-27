@@ -405,6 +405,52 @@ a:focus, i:focus{
     padding: 70px 0;
     margin-right: 10px;
 }
+
+.blog-section {
+    padding-top: 70px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.blog-content-title {
+    font-weight: 700;
+    color: #3c4858;
+    font-family: "Roboto Slab", "Times New Roman", "serif";
+}
+.blog-content p {
+    font-size: 1.35em;
+    line-height: 28px;
+    color: #555;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-family: "Roboto", "Helvetica", "Arial", "sans-serif";
+    text-align: justify;
+}
+
+blockquote .small:before, blockquote footer:before, blockquote small:before{
+    content: '\2014 \00A0';
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+}
+
+blockquote p {
+    font-style: italic;
+}
+
+blockquote small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777;
+    font-weight: 300;
+}
+
 .category_section a, .category-section a:focus, .category-section a:visited{
     margin-top: 10px;
     text-decoration: none;
@@ -451,6 +497,58 @@ a:focus, i:focus{
     margin-top: 20px;
 }
 
+
+.show-profile {
+    background-color: #f96332;
+}
+
+
+#share_box p {
+    padding: 0 0 1em 0;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #3c4858;
+    font-size: 1em;
+}
+
+#share_box i {
+    color: #3c4858;;
+    padding: 1em 1.5em;
+}
+
+#share_box i:hover {
+    color: #f96332;
+    cursor: pointer;
+}
+
+
+
+#admin_links {
+    border-top: 1px solid #E9E9E9;
+    border-bottom: 1px solid #E9E9E9;
+    text-align: center;
+    padding: 1em 0;
+    margin: 1em 0 3em 0;
+}
+
+#admin_links a {
+    color: #9a9da4;
+    margin: 0 1em;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.main-raised hr {
+    width: 3em;
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 2px solid #f96332;
+    margin: 3em auto;
+}
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .blog-front, .blog-back{
@@ -536,7 +634,9 @@ a:focus, i:focus{
 
 @media only screen and (min-width: 200px) and (max-width: 414px){
   .main-raised {
-    margin: 0 0 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*margin: 0 0 0;*/
     border-radius: 6px;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
 }

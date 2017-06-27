@@ -27,7 +27,6 @@ $(document).on("ready", function() {
     });
    
    if ( $(window).width() < 1025 ){
-       console.log("Hello")
        $('.portfolio-card-container').addClass('manual-flip')
        if ($('.after').length){
         $('.after').after('<a onclick="rotateCard(this)" role="button"><i class="fa fa-reply fa-lg fa-fw link-separator" rel="tooltip" title="Turn Around"></i></a>');

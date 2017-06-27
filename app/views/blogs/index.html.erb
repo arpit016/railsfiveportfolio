@@ -35,6 +35,7 @@
                         <% if user_signed_in? %>
                         <p>
                             <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>
+                            <%= link_to '<i class="fa fa-file-text fa-lg fa-fw"></i>'.html_safe, blog_path(blog), {'rel' => 'tooltip', 'title' => 'Show'}%>
                             <%= link_to '<i class="fa fa-pencil-square fa-lg fa-fw"></i>'.html_safe, edit_blog_path(blog), {'rel' => 'tooltip', 'title' => 'Edit'} if logged_in?(:site_admin)%>
                             <%= link_to '<i class="fa fa-trash fa-lg fa-fw"></i>'.html_safe, blog_path(blog), method: :delete, data: { confirm: "Are you sure?" }, :rel => "tooltip", "title" => "Delete" if logged_in?(:site_admin)%>
                           </p>
