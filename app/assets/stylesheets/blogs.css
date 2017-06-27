@@ -406,6 +406,8 @@ a:focus, i:focus{
     margin-right: 10px;
 }
 
+
+
 .blog-section {
     padding-top: 70px;
     padding-bottom: 10px;
@@ -550,8 +552,36 @@ blockquote small {
     margin: 3em auto;
 }
 
+.writer-info-section {
+    padding-bottom: 50px;
+}
+
+.show-front{
+	-webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+     -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* front pane, placed above back */
+.show-front {
+	z-index: 2;
+}
+
+.card-container, .show-front, .back {
+	width: 100%;
+	height: 435px;
+	border-radius: 4px;
+}
+
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .blog-front, .blog-back{
+    .blog-front, .blog-back, .show-front{
         -ms-backface-visibility: visible;
         backface-visibility: visible;
     }
@@ -578,6 +608,24 @@ blockquote small {
     	border-radius: 4px;
     }
 }
+
+@media only screen and (min-width: 318px) and (max-width: 361px){
+  .show-front {
+    	width: 100%;
+    	height: 480px;
+    	border-radius: 4px;
+    }
+}
+
+@media only screen and (min-width: 362px) and (max-width: 493px){
+  .show-front {
+    	width: 100%;
+    	height: 460px;
+    	border-radius: 4px;
+    }
+}
+
+
 
 @media only screen and (min-width: 405px) and (max-width: 449px){
   .blog-card-container, .blog-front, .blog-back {
@@ -634,8 +682,10 @@ blockquote small {
 
 @media only screen and (min-width: 200px) and (max-width: 414px){
   .main-raised {
+      
     margin-left: 10px;
     margin-right: 10px;
+    
     /*margin: 0 0 0;*/
     border-radius: 6px;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);

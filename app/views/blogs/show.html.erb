@@ -75,8 +75,10 @@
         <div class="col-md-8 offset-md-2">
           <% if logged_in?(:site_admin) %>
             <div id = "admin_links">
-              <%= link_to "Edit Article", edit_blog_path(@blog) %>
-              <%= link_to "Delete Article", blog_path(@blog), method: :delete, data: {confirm: "Are You Sure?"} %>
+              <%= link_to "Edit Article", edit_blog_path(@blog) if logged_in?(:site_admin) %>
+              <%= link_to "Delete Article", blog_path(@blog), method: :delete, data: {confirm: "Are You Sure?"} if logged_in?(:site_admin) %>
+              <%= link_to "All Articles", blogs_path %>
+              <%= link_to "Portfolio", portfolios_path %>
             </div>
           <% end %>
           <div id='share_box'>
@@ -102,17 +104,18 @@
         <div class="col-md-8 offset-md-2">
           <div class="card-container manual-flip">
             <div class="workex">
-              <div class="front">
+              <div class="show-front">
                   <div class="cover show-profile">
                   </div>
                   <div class="user">
                       <img class="img-circle" src="/assets/ryan.jpg"/>
                   </div>
                   <div class="content">
-                      <div class="main">
+                      <div class="main text-center">
                           <h3 class="name">John Marvel</h3>
                           <p class="profession">CEO</p>
                           <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                          <%= link_to "About Me", about_path, class: "btn btn-primary btn-round text-center" %>
                       </div>
                       <div class="footer">
                           <div class="social-links text-center">
