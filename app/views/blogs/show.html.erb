@@ -73,14 +73,12 @@
     <div class="share-section text-center">
       <div class="row">
         <div class="col-md-8 offset-md-2">
-          <% if logged_in?(:site_admin) %>
             <div id = "admin_links">
               <%= link_to "Edit Article", edit_blog_path(@blog) if logged_in?(:site_admin) %>
               <%= link_to "Delete Article", blog_path(@blog), method: :delete, data: {confirm: "Are You Sure?"} if logged_in?(:site_admin) %>
               <%= link_to "All Articles", blogs_path %>
               <%= link_to "Portfolio", portfolios_path %>
             </div>
-          <% end %>
           <div id='share_box'>
             <p>Share First Ruby function</p>
             <a onclick="javascript:window.open('http://twitter.com/share?text=First Ruby function by @arpit016 - =http://www.codevode.in/posts/first-ruby-function', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
