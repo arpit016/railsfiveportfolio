@@ -5,6 +5,7 @@ class PortfoliosController < ApplicationController
     
     def index
       @portfolio_items = Portfolio.includes(:technologies, :user)
+      @technologies = Technology.all
     end
     
     def new

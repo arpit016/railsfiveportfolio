@@ -21,6 +21,11 @@ $(document).on("ready", function() {
       $(".fixed-top").css("z-index", "1030");
    });
    
+   $('.btn-category').click(function(){
+        $(".btn-category").addClass("btn-simple");
+        $(this).removeClass('btn-simple');
+    });
+   
    if ( $(window).width() < 1025 ){
        console.log("Hello")
        $('.portfolio-card-container').addClass('manual-flip')
