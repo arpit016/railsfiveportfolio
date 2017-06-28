@@ -10,44 +10,50 @@
   </div>
 </div>
 <div class="main main-raised">
-  <div class="container">
-    <div class="section">
-    	<div class="row">
-    		<div class="col-md-6 offset-md-3 text-center">
-    			<ul class="nav nav-pills nav-pills-primary" role="tablist">
-          	<li class="nav-item">
-          		<a class="nav-link" data-toggle="tab" href="#active" role="tablist">
-          			<i class="fa fa-diamond"></i>
-          		</a>
-          	</li>
-          	<li class="nav-item">
-          		<a class="nav-link active" data-toggle="tab" href="#link" role="tablist">
-          			<i class="fa fa-thermometer-full"></i>
-          		</a>
-          	</li>
-          	<li class="nav-item">
-          		<a class="nav-link" data-toggle="tab" href="#link" role="tablist">
-          			<i class="fa fa-suitcase"></i>
-          		</a>
-          	</li>
-          	<li class="nav-item">
-          		<a class="nav-link" data-toggle="tab" href="#active" role="tablist">
-          			<i class="fa fa-diamond"></i>
-          		</a>
-          	</li>
-          	<li class="nav-item">
-          		<a class="nav-link active" data-toggle="tab" href="#link" role="tablist">
-          			<i class="fa fa-thermometer-full"></i>
-          		</a>
-          	</li>
-          	<li class="nav-item">
-          		<a class="nav-link" data-toggle="tab" href="#link" role="tablist">
-          			<i class="fa fa-suitcase"></i>
-          		</a>
-          	</li>
-          </ul>
-    		</div>
-    	</div>
+  <div class= "container">
+    <div class="row text-center">
+      <div class="col-md-12 category_section">
+        <% @technologies.each do |technology| %>
+          <%= link_to "#{technology.name}", "#", class: "btn btn-primary btn-simple btn-round btn-category"%>
+        <!-- Use this in above statement when category is added "blogs_path(lang: technology.name)"  <button type="button" class="btn btn-primary btn-simple btn-round btn-category"> <%= technology.name %> </button> -->
+        <% end %>
+      </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <% @blogs.each do |blog|%>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <div class="blog-card-container manual-flip">
+            <div class="blog">
+              <div class="blog-front">
+                  <div class="blog-cover">
+                      <%= image_tag "/assets/rotating_card_thumb2.png" %>
+                  </div>
+                  <div class="content">
+                      <div class="blog-header">
+                        <% if user_signed_in? %>
+                        <p>
+                            <i class="fa fa-file-text fa-fw" aria-hidden="true"></i>
+                            <%= link_to '<i class="fa fa-file-text fa-lg fa-fw"></i>'.html_safe, blog_path(blog), {'rel' => 'tooltip', 'title' => 'Show'}%>
+                            <%= link_to '<i class="fa fa-pencil-square fa-lg fa-fw"></i>'.html_safe, edit_blog_path(blog), {'rel' => 'tooltip', 'title' => 'Edit'} if logged_in?(:site_admin)%>
+                            <%= link_to '<i class="fa fa-trash fa-lg fa-fw"></i>'.html_safe, blog_path(blog), method: :delete, data: { confirm: "Are you sure?" }, :rel => "tooltip", "title" => "Delete" if logged_in?(:site_admin)%>
+                          </p>
+                        <% end %>
+                          <p class="profession">Web Developer, Ruby On Rails</p>
+                          <h3 class="name">How to setup shrine for direct S3 upload?</h3>
+                          <p class="description">Road signs, clothing, cars, furniture and computers are all the result of design. Design is everywhere, which sometimes makes it …(Continue Reading)</p>
+                      </div>
+                      <div class="footer">
+                              <i class="fa fa-comment fa-fw" aria-hidden="true"></i> 0 Comments
+                              <p class="time"> 4 months Ago</p>
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>  
 </div>

@@ -1,0 +1,133 @@
+<div class="wrapper">
+  <div class="page-header page-header-small" filter-color="orange">
+    <div class="page-header-image" data-parallax="true" style="background-image: url('/assets/bg10.jpg');">
+    </div>
+		<div class="container">
+		  <div class="content-center">
+		    <h3 class="title">A Place for Entrepreneurs to Share and Discover New Stories</h3>
+		  </div>
+		</div>
+  </div>
+</div>
+
+<div class="main main-raised">
+  <div class= "container">
+    <div class="blog-section">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 blog-content">
+          <h3 class="blog-content-title"> The Castle Looks different at night..</h3>
+          <p>
+            This is the paragraph where you can write more details about your product. 
+            Keep you user engaged by providing meaningful information. 
+            Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. 
+            Add a button if you want the user to see more. We are here to make life better.
+            <br>
+            <br>
+            
+						And now I look and look around and there’s so many Kanyes I've been trying to figure out the bed design for the master 
+						bedroom at our Hidden Hills compound... and thank you for turning my personal jean jacket into a couture piece.
+						
+            <blockquote>
+              <p>
+                
+								“And thank you for turning my personal jean jacket into a couture piece.”
+							
+              </p>
+              <small>
+                
+							Kanye West, Producer.
+							
+              </small>
+            </blockquote>
+          </p>
+          <h3 class="blog-content-title"> The Castle Looks different at night..</h3>
+          <p>
+            This is the paragraph where you can write more details about your product. 
+            Keep you user engaged by providing meaningful information. 
+            Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. 
+            Add a button if you want the user to see more. We are here to make life better.
+            <br>
+            <br>
+            
+						And now I look and look around and there’s so many Kanyes I've been trying to figure out the bed design for the master 
+						bedroom at our Hidden Hills compound... and thank you for turning my personal jean jacket into a couture piece.
+						
+            <blockquote>
+              <p>
+                
+								“And thank you for turning my personal jean jacket into a couture piece.”
+							
+              </p>
+              <small>
+                
+							Kanye West, Producer.
+							
+              </small>
+            </blockquote>
+          </p>
+          <p><i class="fa fa-tags" aria-hidden="true"></i> Ruby On Rails, Javascript, CSS</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="share-section text-center">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div id = "admin_links">
+              <%= link_to "Edit Article", edit_blog_path(@blog) if logged_in?(:site_admin) %>
+              <%= link_to "Delete Article", blog_path(@blog), method: :delete, data: {confirm: "Are You Sure?"} if logged_in?(:site_admin) %>
+              <%= link_to "All Articles", blogs_path %>
+              <%= link_to "Portfolio", portfolios_path %>
+            </div>
+          <div id='share_box'>
+            <p>Share First Ruby function</p>
+            <a onclick="javascript:window.open('http://twitter.com/share?text=First Ruby function by @arpit016 - =http://www.codevode.in/posts/first-ruby-function', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <i class='fa fa-twitter'></i>
+            </a>
+            <!-- Facebook -->
+            <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=http://www.codevode.in/posts/first-ruby-function', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <i class='fa fa-facebook'></i>
+            </a>
+            <!-- Google Plus -->
+            <a onclick="javascript:window.open('https://plus.google.com/share?url=http://www.codevode.in/posts/first-ruby-function', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <i class='fa fa-google-plus'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="writer-info-section">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="card-container manual-flip">
+            <div class="workex">
+              <div class="show-front">
+                  <div class="cover show-profile">
+                  </div>
+                  <div class="user">
+                      <img class="img-circle" src="/assets/ryan.jpg"/>
+                  </div>
+                  <div class="content">
+                      <div class="main text-center">
+                          <h3 class="name">John Marvel</h3>
+                          <p class="profession">CEO</p>
+                          <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                          <%= link_to "About Me", about_path, class: "btn btn-primary btn-round text-center" %>
+                      </div>
+                      <div class="footer">
+                          <div class="social-links text-center">
+                              <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                              <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                              <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                          </div>
+                      </div>
+                  </div>
+              </div> <!-- end front panel -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

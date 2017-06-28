@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application' %>
      <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
@@ -16,7 +17,7 @@
   </head>
 
   <body>
-    <% if (controller_name === "portfolios" && action_name === "new") || (controller_name === "portfolios" && action_name === "edit")%>
+    <% if (action_name === "new") || (action_name === "edit")%>
       <%= render 'layouts/navbar' %>
     <% else %>
       <%= render 'layouts/transparentnavbar' %>

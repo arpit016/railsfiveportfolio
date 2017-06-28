@@ -21,13 +21,18 @@ $(document).on("ready", function() {
       $(".fixed-top").css("z-index", "1030");
    });
    
+   $('.btn-category').click(function(){
+        $(".btn-category").addClass("btn-simple");
+        $(this).removeClass('btn-simple');
+    });
+   
    if ( $(window).width() < 1025 ){
-       console.log("Hello")
        $('.portfolio-card-container').addClass('manual-flip')
        if ($('.after').length){
         $('.after').after('<a onclick="rotateCard(this)" role="button"><i class="fa fa-reply fa-lg fa-fw link-separator" rel="tooltip" title="Turn Around"></i></a>');
        } else {
            $('.after-show').after('<a onclick="rotateCard(this)" role="button"><i class="fa fa-reply fa-lg fa-fw link-separator" rel="tooltip" title="Turn Around"></i></a>');
+           $('.after-read').after('<a onclick="rotateCard(this)" role="button" class="btn btn-primary btn-round link-separator mobile-link"><i class="fa fa-reply fa-lg fa-fw"></i> Turn</a>');
        }
    }
    

@@ -12,6 +12,10 @@ body {
 }
 */
 
+body {
+	background-color: #E3E3E3;
+}
+
 /* entire container, keeps perspective */
 .portfolio-card-container {
 	  -webkit-perspective: 800px;
@@ -368,18 +372,48 @@ a:focus, i:focus{
 }
 
 .modal.show .modal-dialog {
-  -webkit-transform: translate(0, 5%);
-  -o-transform: translate(0, 5%);
-  transform: translate(0, 5%); 
+  -webkit-transform: translate(0, 2%);
+  -o-transform: translate(0, 2%);
+  transform: translate(0, 2%); 
     
+}
+
+.custom-color {
+    color: #f96332;
+}
+
+.portfolio-description p {
+    margin-top: 20px;
+    line-height: 1.9em;
+    text-align: justify;
+}
+
+.technology_section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.technology_section .technology {
+    margin-top: 6px;    
 }
 
 .portfolio-cocoon {
     padding-top: 7px;
 }
 
+.close-button {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding: 15px 48px !important;
+}
+
 .cocoon-link a {
     text-decoration: none;
+}
+
+.mobile-link {
+    color: #fff !important;
+    margin-left: 10px !important;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
