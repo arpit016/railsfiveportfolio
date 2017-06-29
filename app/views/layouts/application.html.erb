@@ -17,10 +17,10 @@
   </head>
 
   <body>
-    <% if (action_name === "new") || (action_name === "edit")%>
-      <%= render 'layouts/navbar' %>
+    <% if (controller_name === "sessions" && action_name === "new") || (action_name === "index") || (action_name === "show") || (action_name === "home") || (action_name === "about")%>
+       <%= render 'layouts/transparentnavbar' %>
     <% else %>
-      <%= render 'layouts/transparentnavbar' %>
+      <%= render 'layouts/navbar' %>
     <% end %>
     <%= yield %>
     
