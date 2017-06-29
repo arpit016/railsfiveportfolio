@@ -13,9 +13,13 @@
                 <div class="input-group form-group-no-border">       
                   <%= f.text_field :title, :class => 'form-control', :placeholder => 'Title', autofocus: true %>
                 </div>
+                
+                <div class="text-center">
+                    <h5 class="title title-up blog-space">Choose Category: </h4>
+                </div>
               
-                <div class="input-group form-group-no-border">        
-                  <%= f.text_field :title, :class => 'form-control blog-space', :placeholder => 'Category' %>
+                <div class="checkbox text-center">        
+                  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, {}, {class:"checkbox", :multiple => true } %>
                 </div>
               </div>
             </div>

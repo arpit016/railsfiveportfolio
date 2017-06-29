@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170627031934) do
+ActiveRecord::Schema.define(version: 20170629061807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,13 +22,27 @@ ActiveRecord::Schema.define(version: 20170627031934) do
     t.datetime "updated_at",              null: false
     t.string   "slug"
     t.integer  "status",      default: 0
-    t.integer  "topic_id"
     t.integer  "user_id"
     t.text     "main_image"
     t.text     "thumb_image"
     t.index ["slug"], name: "index_blogs_on_slug", unique: true, using: :btree
-    t.index ["topic_id"], name: "index_blogs_on_topic_id", using: :btree
     t.index ["user_id"], name: "index_blogs_on_user_id", using: :btree
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_categories_on_name", unique: true, using: :btree
+  end
+
+  create_table "categorizations", force: :cascade do |t|
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "blog_id"
+    t.integer  "category_id"
+    t.index ["blog_id"], name: "index_categorizations_on_blog_id", using: :btree
+    t.index ["category_id"], name: "index_categorizations_on_category_id", using: :btree
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -63,12 +77,6 @@ ActiveRecord::Schema.define(version: 20170627031934) do
     t.index ["portfolio_id"], name: "index_technologies_on_portfolio_id", using: :btree
   end
 
-  create_table "topics", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -88,8 +96,9 @@ ActiveRecord::Schema.define(version: 20170627031934) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "blogs", "topics"
   add_foreign_key "blogs", "users"
+  add_foreign_key "categorizations", "blogs"
+  add_foreign_key "categorizations", "categories"
   add_foreign_key "portfolios", "users"
   add_foreign_key "technologies", "portfolios"
 end

@@ -310,7 +310,9 @@ body {
 .form-signup .checkbox {
   margin-top: 20px; }
 .form-signup .checkbox label {
-  margin-left: 17px; }
+  margin-left: 17px; 
+  margin-bottom: 10px;
+}
 .form-signup .checkbox .checkbox-material {
   padding-right: 12px; }
 .form-signup .social-line {
