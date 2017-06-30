@@ -6,6 +6,9 @@ class Portfolio < ApplicationRecord
                                   reject_if: lambda { |attrs| attrs['name'].blank? },
                                   allow_destroy: true
     
+    mount_uploader :thumb_image, PortfolioUploader
+    mount_uploader :main_image, PortfolioUploader
+    
     after_initialize :set_defaults
     
     def set_defaults
