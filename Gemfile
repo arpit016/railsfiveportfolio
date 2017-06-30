@@ -37,6 +37,7 @@ gem 'carrierwave', '~> 1.1'
 gem 'mini_magick', '~> 4.7', '>= 4.7.2'
 gem 'carrierwave-aws', '~> 1.1'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'ckeditor', '~> 4.2', '>= 4.2.4'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

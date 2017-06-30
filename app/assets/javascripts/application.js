@@ -20,4 +20,11 @@
 //= require now-ui-kit
 //= require custom
 //= require cocoon
+//= require ckeditor/init
+//= require ckeditor/plugins/lineutils/plugin
+//= require ckeditor/plugins/widgetselection/plugin
+//= require ckeditor/plugins/widget/plugin
+//= require ckeditor/plugins/prism/plugin
+//= require ckeditor/plugins/codesnippet/plugin
+//= require ckeditor/config
 //= require_tree .
