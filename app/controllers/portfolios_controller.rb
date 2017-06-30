@@ -9,12 +9,11 @@ class PortfoliosController < ApplicationController
     end
     
     def new
-      @portfolio_item = Portfolio.new
+      @portfolio_item = current_user.portfolios.build
     end
     
     def create
-      @portfolio_item = Portfolio.new(portfolio_params)
-      @portfolio_item.user = current_user.id
+      @portfolio_item = current_user.portfolios.build(portfolio_params)
   
       respond_to do |format|
         if @portfolio_item.save
@@ -55,6 +54,6 @@ class PortfoliosController < ApplicationController
       end
       
       def portfolio_params
-        params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:id, :name, :_destroy])
+        params.require(:portfolio).permit(:title, :subtitle, :body, :main_image, :thumb_image, technologies_attributes: [:id, :name, :_destroy])
       end
 end

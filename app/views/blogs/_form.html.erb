@@ -31,12 +31,16 @@
               </div>
               <div class="col-md-6">
                 <div class="text-center" style="margin: 5px;">
-                    <button class="btn btn-simple btn-lg btn-round blog-space">Display Image</button>
+                  <label class="btn btn-simple btn-lg btn-round blog-space">
+                    Main Image <%= f.file_field :main_image, style:"display: none;" %>
+                  </label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="text-center" style="margin: 5px;">
-                    <button class="btn btn-simple btn-lg btn-round blog-space">Thumb Image</button>
+                  <label class="btn btn-simple btn-lg btn-round blog-space">
+                    Thumb Image <%= f.file_field :thumb_image, style:"display: none;" %>
+                  </label>
                 </div>
               </div>
             </div>

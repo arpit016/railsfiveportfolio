@@ -17,3 +17,4 @@
 .byebug_history
 # I don't want to upload my secrets.yml file to github
 /config/secrets.yml
+.env

@@ -27,10 +27,14 @@
                     <h4 class="title title-up">Image Upload: </h4>
                 </div>
                 <div class="text-center" style="margin: 5px;">
-                    <button class="btn btn-simple btn-lg btn-round">Display Image</button>
+                  <label class="btn btn-simple btn-lg btn-round">
+                    Main Image <%= f.file_field :main_image, style:"display: none;" %>
+                  </label>
                 </div>
                 <div class="text-center" style="margin: 5px;">
-                    <button class="btn btn-simple btn-lg btn-round">Thumb Image</button>
+                  <label class="btn btn-simple btn-lg btn-round">
+                    Thumb Image <%= f.file_field :thumb_image, style:"display: none;" %>
+                  </label>
                 </div>
                 <div>
                   <div class="text-center">
