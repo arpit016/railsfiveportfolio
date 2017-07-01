@@ -25,6 +25,9 @@ module CompletePortfolio
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
       html_tag
     }
+    config.assets.precompile += Ckeditor.assets
+    config.assets.precompile += %w( ckeditor/* )
+    config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
     
   end
 end
