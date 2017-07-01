@@ -27,4 +27,6 @@
 //= require ckeditor/plugins/prism/plugin
 //= require ckeditor/plugins/codesnippet/plugin
 //= require ckeditor/config
+//= require clipboard.min
+//= require ckeditor/plugins/prism/lib/prism/prism
 //= require_tree .

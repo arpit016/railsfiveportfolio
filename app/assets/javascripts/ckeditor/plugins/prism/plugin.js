@@ -24,14 +24,16 @@
       // Method is available only if wysiwygarea exists and
       // CKEditor is at least version 4.4.
       if (editor.addContentsCss) {
-        editor.addContentsCss(path + 'lib/prism/prism_patched.min.css');
+        //editor.addContentsCss(path + 'lib/prism/prism_patched.min.css');
+        editor.addContentsCss(path + 'lib/prism/prism.css');
       }
 
       // Create a new instance of the highlighter.
       var prismHighlighter = new CKEDITOR.plugins.codesnippet.highlighter({
         init: function(ready) {
           // Load the Prism.js library asynchronously.
-          CKEDITOR.scriptLoader.load(path + 'lib/prism/prism_patched.min.js', function() {
+          //CKEDITOR.scriptLoader.load(path + 'lib/prism/prism_patched.min.js', function() {
+          CKEDITOR.scriptLoader.load(path + 'lib/prism/prism.js', function() {
             // Notify the handler that the library has been loaded.
             ready();
           });
@@ -39,55 +41,28 @@
 
         // Specify the supported languages.
         languages: {
-          abap: 'ABAP',
-          actionscript: 'ActionScript',
           apacheconf: 'Apache Conf',
-          applescript: 'AppleScript',
-          aspnet: 'ASP.NET',
           bash: 'Bash',
-          basic: 'BASIC',
-          c: 'C',
           coffeescript: 'CoffeeScript',
-          cpp: 'C++',
-          csharp: 'C#',
           css: 'CSS',
-          d: 'D',
-          dart: 'Dart',
-          diff: 'Diff',
-          docker: 'Docker',
-          erlang: 'Erlang',
-          fortran: 'Fortran',
-          fsharp: 'F#',
           git: 'Git',
-          go: 'Go',
-          groovy: 'Groovy',
-          haskell: 'Haskell',
+          haml: 'Haml',
           markup: 'HTML',
           http: 'HTTP',
           ini: 'INI',
           java: 'Java',
           javascript: 'JavaScript',
-          lua: 'Lua',
-          makefile: 'Makefile',
+          less: 'Less',
           markdown: 'Markdown',
-          matlab: 'MATLAB',
           nginx: 'Nginx',
-          objectivec: 'Objective-C',
-          pascal: 'Pascal',
-          perl: 'Perl',
-          php: 'PHP',
-          prolog: 'Prolog',
           python: 'Python',
-          puppet: 'Puppet',
-          r: 'R',
           ruby: 'Ruby',
-          rust: 'Rust',
           sas: 'SAS',
-          scala: 'Scala',
-          scheme: 'Scheme',
+          sass: 'Sass',
+          scss: 'SCSS',
           sql: 'SQL',
           swift: 'Swift',
-          twig: 'Twig',
+          typescript: 'Typescript',
           vim: 'vim',
           yaml: 'YAML',
         },

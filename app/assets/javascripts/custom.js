@@ -35,6 +35,10 @@ $(document).on("ready", function() {
            $('.after-read').after('<a onclick="rotateCard(this)" role="button" class="btn btn-primary btn-round link-separator mobile-link"><i class="fa fa-reply fa-lg fa-fw"></i> Turn</a>');
        }
    }
+   var pre = $(document).find('pre');
+   if (pre.length) {
+       $(document).find('pre').addClass('line-numbers');
+   }
    
 });
 
