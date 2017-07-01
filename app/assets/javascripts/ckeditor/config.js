@@ -27,6 +27,33 @@ CKEDITOR.editorConfig = function( config ) {
   config.allowedContent = true;
   
   config.extraPlugins = "lineutils,widget,codesnippet,prism";
+  
+  config.codeSnippet_languages = {
+    apacheconf: 'Apache Conf',
+    bash: 'Bash',
+    coffeescript: 'CoffeeScript',
+    css: 'CSS',
+    git: 'Git',
+    haml: 'Haml',
+    markup: 'HTML',
+    http: 'HTTP',
+    ini: 'INI',
+    java: 'Java',
+    javascript: 'JavaScript',
+    less: 'Less',
+    markdown: 'Markdown',
+    nginx: 'Nginx',
+    python: 'Python',
+    ruby: 'Ruby',
+    sas: 'SAS',
+    sass: 'Sass',
+    scss: 'SCSS',
+    sql: 'SQL',
+    swift: 'Swift',
+    typescript: 'Typescript',
+    vim: 'vim',
+    yaml: 'YAML'
+}
 
   // Toolbar groups configuration.
   config.toolbar = [
