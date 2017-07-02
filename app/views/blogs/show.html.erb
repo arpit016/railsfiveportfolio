@@ -4,7 +4,7 @@
     </div>
 		<div class="container">
 		  <div class="content-center">
-		    <h3 class="title">A Place for Entrepreneurs to Share and Discover New Stories</h3>
+		    <h3 class="wow fadeInDown title" data-wow-delay="1s">A Place for Entrepreneurs to Share and Discover New Stories</h3>
 		  </div>
 		</div>
   </div>
@@ -14,13 +14,13 @@
   <div class= "container">
     <div class="blog-section">
       <div class="row">
-        <div class="col-md-8 offset-md-2 blog-content">
+        <div class="col-md-8 offset-md-2 blog-content wow zoomIn" data-wow-delay="1s">
           <%= @blog.body.html_safe%>
         </div>
       </div>
     </div>
-    <hr>
-    <div class="share-section text-center">
+    <hr class="wow zoomIn" data-wow-delay="1s">
+    <div class="share-section text-center wow zoomIn" data-wow-delay="1s">
       <div class="row">
         <div class="col-md-8 offset-md-2">
             <div id = "admin_links">
@@ -46,11 +46,12 @@
         </div>
       </div>
     </div>
-    <hr>
+    <hr class="wow zoomIn" data-wow-delay="0.5s">
     <div class="writer-info-section">
       <div class="row">
         <div class="col-md-8 offset-md-2">
-          <div class="card-container manual-flip">
+          <h4 class="wow zoomIn title text-center blog-author" data-wow-delay="1s">written by</h4>
+          <div class="wow zoomIn card-container manual-flip" data-wow-delay="1s">
             <div class="workex">
               <div class="show-front">
                   <div class="cover show-profile">

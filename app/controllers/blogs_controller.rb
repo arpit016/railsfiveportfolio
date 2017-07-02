@@ -6,8 +6,12 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
-    @technologies = Technology.all
+    if params[:category].blank?
+      @blogs = Blog.all
+    else
+      @category = Category.find_by(name: params[:category])
+      @blogs = @category.blogs
+    end
   end
 
   # GET /blogs/1

@@ -582,6 +582,20 @@ blockquote small {
 	border-radius: 4px;
 }
 
+.index-blog-title{
+    color: black;
+}
+.index-blog-title:hover, .index-blog-title:focus {
+    color: #f96332;
+    text-decoration: none;
+}
+
+.writer-info-section .blog-author {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #3c4858;
+}
+
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .blog-front, .blog-back, .show-front{
