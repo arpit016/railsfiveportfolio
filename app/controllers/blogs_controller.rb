@@ -6,17 +6,33 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    if params[:category].blank?
-      @blogs = Blog.all
-    else
-      if (params[:category] === "all")
-        @blogs = Blog.all
+    if (logged_in?(:site_admin))
+      if params[:category].blank?
+        @blogs = Blog.page(params[:page]).per(3)
       else
-        @category = Category.find_by(name: params[:category])
-        @blogs = @category.blogs
+        if (params[:category] === "all")
+          @blogs = Blog.page(params[:page]).per(3)
+        else
+          @category = Category.find_by(name: params[:category])
+          @blogs = @category.blogs.page(params[:page]).per(3)
+        end
+        respond_to do |format|
+          format.js
+        end
       end
-      respond_to do |format|
-        format.js
+    else
+      if params[:category].blank?
+        @blogs = Blog.published.page(params[:page]).per(3)
+      else
+        if (params[:category] === "all")
+          @blogs = Blog.published.page(params[:page]).per(3)
+        else
+          @category = Category.find_by(name: params[:category])
+          @blogs = @category.blogs.published.page(params[:page]).per(3)
+        end
+        respond_to do |format|
+          format.js
+        end
       end
     end
   end

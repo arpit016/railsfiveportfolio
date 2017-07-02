@@ -39,8 +39,9 @@ class PortfoliosController < ApplicationController
     
     def destroy
       @portfolio_item.destroy
+      @portfolio_items = Portfolio.includes(:technologies, :user)
       respond_to do |format|
-        format.html { redirect_to portfolios_path, notice: 'Portfolio Item was successfully deleted.'}
+        format.js
       end
     end
     

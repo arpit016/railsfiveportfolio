@@ -24,6 +24,15 @@
     <div class="row" id="blogs_articles">
       <%= render 'blogs/articles', blogs: @blogs  %>
     </div>
-  </div>  
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="pagination" class="pagination-container justify-content-center">
+          <%= render 'blogs/paginate', blogs: @blogs, remote: true %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <%= render 'layouts/footer'%>

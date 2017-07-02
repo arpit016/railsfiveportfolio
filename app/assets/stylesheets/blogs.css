@@ -600,6 +600,33 @@ blockquote small {
     color: black !important;
 }
 
+#pagination {
+    margin: 20px 0 20px 0;
+    padding: 10px;
+}
+
+#pagination nav {
+    text-align: center !important;
+}
+
+.pagination {
+    display: inline-flex !important;
+}
+
+#pagination  a{
+    font-size: 0.7em;
+    text-decoration: none;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+    padding: 0px !important;
+}
+.pagination>ul>li>.page-item .disabled {
+    display:none !important;
+}
+.page-item.active > .page-link {
+    background-color: #f96332 !important;
+}
+
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .blog-front, .blog-back, .show-front{
