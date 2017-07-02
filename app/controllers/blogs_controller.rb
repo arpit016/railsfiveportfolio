@@ -9,8 +9,15 @@ class BlogsController < ApplicationController
     if params[:category].blank?
       @blogs = Blog.all
     else
-      @category = Category.find_by(name: params[:category])
-      @blogs = @category.blogs
+      if (params[:category] === "all")
+        @blogs = Blog.all
+      else
+        @category = Category.find_by(name: params[:category])
+        @blogs = @category.blogs
+      end
+      respond_to do |format|
+        format.js
+      end
     end
   end
 
@@ -58,8 +65,9 @@ class BlogsController < ApplicationController
   # DELETE /blogs/1.json
   def destroy
     @blog.destroy
+    @blogs = Blog.all
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.js
     end
   end
   
@@ -69,7 +77,10 @@ class BlogsController < ApplicationController
     elsif @blog.draft?
       @blog.published!
     end
-    redirect_to blogs_url, notice: "Post status was changed successfully"
+    @blogs = Blog.all
+    respond_to do |format|
+      format.js 
+    end
   end
 
   private

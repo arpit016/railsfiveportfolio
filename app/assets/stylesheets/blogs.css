@@ -596,6 +596,10 @@ blockquote small {
     color: #3c4858;
 }
 
+.status-draft {
+    color: black !important;
+}
+
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .blog-front, .blog-back, .show-front{
