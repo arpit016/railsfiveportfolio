@@ -16,6 +16,8 @@
  *= require blogs
  *= require portfolios
  *= require prism
+ *= require animate
+ *= require typed
  *= require_self
  *= require_tree .
  */

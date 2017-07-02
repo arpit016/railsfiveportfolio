@@ -29,4 +29,6 @@
 //= require ckeditor/config
 //= require clipboard.min
 //= require ckeditor/plugins/prism/lib/prism/prism
+//= require wow.min
+//= require typed
 //= require_tree .
