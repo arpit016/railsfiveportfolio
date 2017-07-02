@@ -1,1 +1,4 @@
 $("#blogs_articles").html("<%= escape_javascript(render partial: 'articles', locals: { blogs: @blogs } ) %>");
+
+$("#pagination").html("<%= escape_javascript(render partial: 'paginate', locals: { blogs: @blogs } ) %>")
+$(".disabled").remove()

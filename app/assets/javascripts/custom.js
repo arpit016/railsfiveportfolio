@@ -60,6 +60,8 @@ $(document).on("ready", function() {
        startDelay: 2000
    });
    
+   $('.disabled').remove();
+   
 });
 
 function rotateCard(btn){

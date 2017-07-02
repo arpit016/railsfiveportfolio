@@ -1,5 +1,4 @@
 <% blogs.each do |blog|%>
-  <% if logged_in?(:site_admin) %>
     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
       <div class="blog-card-container manual-flip wow zoomIn" data-wow-delay="1s">
         <div class="blog">
@@ -33,41 +32,4 @@
         </div>
       </div>
     </div>
-  <% else %>
-    <% if blog.status == "published" %>
-      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-        <div class="blog-card-container manual-flip wow zoomIn" data-wow-delay="1s">
-          <div class="blog">
-            <div class="blog-front">
-                <div class="blog-cover">
-                    <%= image_tag blog.thumb_image %>
-                </div>
-                <div class="content">
-                    <div class="blog-header">
-                      <% if logged_in?(:site_admin) %>
-                        <p>
-                          <% if blog.status == "draft" %>
-                            <%= link_to '<i class="fa fa-file-text fa-lg fa-fw"></i>'.html_safe, toggle_status_blog_path(blog), remote: true, :class => "status-draft", :rel => "tooltip", "title" => "Draft" %>
-                          <% else %>
-                            <%= link_to '<i class="fa fa-file-text fa-lg fa-fw"></i>'.html_safe, toggle_status_blog_path(blog), remote: true, :rel => "tooltip", "title" => "Published" %>
-                          <% end %>
-                          <%= link_to '<i class="fa fa-pencil-square fa-lg fa-fw"></i>'.html_safe, edit_blog_path(blog), {'rel' => 'tooltip', 'title' => 'Edit'}  %>
-                          <%= link_to '<i class="fa fa-trash fa-lg fa-fw"></i>'.html_safe, blog_path(blog), method: :delete, remote: true, data: { confirm: "Are you sure?" }, :rel => "tooltip", "title" => "Delete" %>
-                        </p>
-                      <% end %>
-                        <p class="profession">Web Developer, Ruby On Rails</p>
-                        <h3 class="name"><%= link_to blog.title, blog_path(blog), class: "index-blog-title" %></h3>
-                        <p class="description">Road signs, clothing, cars, furniture and computers are all the result of design. Design is everywhere, which sometimes makes it …(Continue Reading)</p>
-                    </div>
-                    <div class="footer">
-                            <i class="fa fa-comment fa-fw" aria-hidden="true"></i> 0 Comments
-                            <p class="time"> 4 months Ago</p>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
 <% end %>

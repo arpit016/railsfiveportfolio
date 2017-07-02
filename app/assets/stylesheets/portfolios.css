@@ -418,6 +418,10 @@ a:focus, i:focus{
     margin-left: 10px !important;
 }
 
+#portfolio_top {
+    padding-top: 10%;
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .portfolio-front, .portfolio-back{
         -ms-backface-visibility: visible;
