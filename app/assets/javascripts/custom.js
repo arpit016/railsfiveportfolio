@@ -60,6 +60,14 @@ $(document).on("ready", function() {
        startDelay: 2000
    });
    
+   $('.contact-reply').typed({
+      strings: ["Thank You! for your message. I'll get back to you soon. "],
+      typeSpeed: 70,
+      loop: true,
+      loopCount: 1,
+      startDelay: 500
+   });
+   
    $('.disabled').remove();
    
 });
