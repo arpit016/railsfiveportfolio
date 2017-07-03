@@ -627,6 +627,9 @@ blockquote small {
     background-color: #f96332 !important;
 }
 
+.comment-section {
+    padding-bottom: 40px;
+}
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .blog-front, .blog-back, .show-front{
