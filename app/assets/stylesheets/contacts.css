@@ -1,0 +1,24 @@
+.contact-form{
+    max-width: 500px !important;
+}
+
+.contact-icons {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 35px;
+}
+
+.contact-icons .follow-link{
+    margin-right: 30px;
+    color: #fff;
+}
+
+.contact-header {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.contact-footer nav{
+    float: none;
+} 

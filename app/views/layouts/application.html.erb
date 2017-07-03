@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <% if (controller_name === "sessions" && action_name === "new") || (action_name === "index") || (action_name === "show") || (action_name === "home") || (action_name === "about")%>
+    <% if (controller_name === "sessions" && action_name === "new") || (controller_name === "contacts") || (action_name === "index") || (action_name === "show") || (action_name === "home") || (action_name === "about")%>
        <%= render 'layouts/transparentnavbar' %>
     <% else %>
       <%= render 'layouts/navbar' %>

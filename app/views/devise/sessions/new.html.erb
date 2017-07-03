@@ -6,13 +6,11 @@
             <div class="col-md-4 content-center">
                 <div class="card card-login card-plain">
                     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html:{class: 'form'}) do |f| %>
-                    <!--
+                    
                         <div class="header header-primary text-center">
-                            <div class="logo-container">
-                                <img src="../assets/img/now-logo.png" alt="">
-                            </div>
+                            <h4 class="title contact-header"> LOGIN </h4>
                         </div>
-                    -->
+                
                         <div class="content">
                             <div class="input-group form-group-no-border input-lg">
                                 <span class="input-group-addon">
@@ -34,29 +32,34 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container">
+        <footer class="footer contact-footer">
+            <div class="container text-center">
                 <nav>
                     <ul>
                         <li>
+                          &copy;
                             <a href="#">
-                                Arpit Agarwal
+                                 Arpit Agarwal
                             </a>
                         </li>
                         <li>
-                            <a href="http://blog.creative-tim.com">
+                            <a href="#">
+                                About Me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
                                 Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="Portfolio">
+                                Portfolio
                             </a>
                         </li>
                     </ul>
                 </nav>
-                <div class="copyright">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>, Designed And Coded by
-                    <a href="#" target="_blank">Arpit Agarwal</a>.
-                </div>
+               
             </div>
         </footer>
     </div>
