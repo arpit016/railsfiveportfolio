@@ -21,6 +21,17 @@
                 <div class="checkbox text-center">        
                   <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, {}, {class:"checkbox", :multiple => true } %>
                 </div>
+                
+                <div class="text-center">
+                    <h5 class="title title-up blog-space">Article Status: </h4>
+                </div>
+                <div class="text-center">
+                  <%= f.radio_button :status, 'draft'%>
+                  <%= f.label :status, 'Draft' %>
+              
+                  <%= f.radio_button :status, 'published'%>
+                  <%= f.label :status, 'Published' %>
+                </div>
               </div>
             </div>
             <div class="row">
