@@ -30,16 +30,16 @@
               <%= link_to "Portfolio", portfolios_path %>
             </div>
           <div id='share_box'>
-            <p>Share First Ruby function</p>
-            <a onclick="javascript:window.open('http://twitter.com/share?text=First Ruby function by @arpit016 - =http://www.codevode.in/posts/first-ruby-function', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <p>Share <%= @blog.title %></p>
+            <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @blog.title %> by @arpit016 - =<%= blog_url(@blog) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
             <i class='fa fa-twitter'></i>
             </a>
             <!-- Facebook -->
-            <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=http://www.codevode.in/posts/first-ruby-function', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= blog_url(@blog) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
             <i class='fa fa-facebook'></i>
             </a>
             <!-- Google Plus -->
-            <a onclick="javascript:window.open('https://plus.google.com/share?url=http://www.codevode.in/posts/first-ruby-function', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+            <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= blog_url(@blog) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
             <i class='fa fa-google-plus'></i>
             </a>
           </div>
