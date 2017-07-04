@@ -4,7 +4,8 @@
     </div>
 		<div class="container">
 		  <div class="content-center">
-		    <h3 class="wow fadeInDown title" data-wow-delay="1s">A Place for Entrepreneurs to Share and Discover New Stories</h3>
+		    <h3 class="wow fadeInDown title" data-wow-delay="1s"><%= @blog.title %></h3>
+		    <p class="wow fadeInUp" data-wow-delay="1s"> By <%= link_to "Arpit Agarwal", about_path %> &emsp;|&emsp; <%= @blog.updated_at.strftime("%B %e, %Y") %></p>
 		  </div>
 		</div>
   </div>
@@ -61,16 +62,16 @@
                   </div>
                   <div class="content">
                       <div class="main text-center">
-                          <h3 class="name">John Marvel</h3>
-                          <p class="profession">CEO</p>
-                          <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                          <h3 class="name">Arpit Agarwal</h3>
+                          <p class="profession">SOFTWARE DEVELOPER</p>
+                          <p class="text-center">A programmer of considerable range, in love with Ruby on Rails and Python. I love to write technical blog posts and share the knowledge gained. Know more about me below.</p>
                           <%= link_to "About Me", about_path, class: "btn btn-primary btn-round text-center" %>
                       </div>
                       <div class="footer">
                           <div class="social-links text-center">
-                              <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
-                              <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
-                              <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                              <a href="https://github.com/arpit016" class="github"><i class="fa fa-github fa-fw"></i></a>
+                              <a href="https://stackoverflow.com/users/4885251/arpit-agarwal" class="stackoverflow"><i class="fa fa-stack-overflow fa-fw"></i></a>
+                              <a href="https://www.facebook.com/arpit160" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
                           </div>
                       </div>
                   </div>
