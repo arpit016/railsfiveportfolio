@@ -8,13 +8,13 @@ class BlogsController < ApplicationController
   def index
     if (logged_in?(:site_admin))
       if params[:category].blank?
-        @blogs = Blog.page(params[:page]).per(3)
+        @blogs = Blog.recent.page(params[:page]).per(3)
       else
         if (params[:category] === "all")
-          @blogs = Blog.page(params[:page]).per(3)
+          @blogs = Blog.recent.page(params[:page]).per(3)
         else
           @category = Category.find_by(name: params[:category])
-          @blogs = @category.blogs.page(params[:page]).per(3)
+          @blogs = @category.blogs.recent.page(params[:page]).per(3)
         end
         respond_to do |format|
           format.js
@@ -22,13 +22,13 @@ class BlogsController < ApplicationController
       end
     else
       if params[:category].blank?
-        @blogs = Blog.published.page(params[:page]).per(3)
+        @blogs = Blog.published.recent.page(params[:page]).per(3)
       else
         if (params[:category] === "all")
-          @blogs = Blog.published.page(params[:page]).per(3)
+          @blogs = Blog.published.recent.page(params[:page]).per(3)
         else
           @category = Category.find_by(name: params[:category])
-          @blogs = @category.blogs.published.page(params[:page]).per(3)
+          @blogs = @category.blogs.published.recent.page(params[:page]).per(3)
         end
         respond_to do |format|
           format.js

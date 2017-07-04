@@ -12,4 +12,8 @@ class Blog < ApplicationRecord
     
     mount_uploader :thumb_image, BlogUploader
     mount_uploader :main_image, BlogUploader
+    
+    def self.recent
+        order("created_at DESC")
+    end
 end
