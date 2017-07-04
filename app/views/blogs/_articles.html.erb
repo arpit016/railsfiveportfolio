@@ -21,7 +21,7 @@
                     <% end %>
                       <p class="profession">Web Developer, Ruby On Rails</p>
                       <h3 class="name"><%= link_to blog.title, blog_path(blog), class: "index-blog-title" %></h3>
-                      <p class="description"><%= truncate(blog.body.html_safe, length: 100, escape: false) %> <%= link_to "(Continue reading)", blog %></p>
+                      <p class="description"><%= truncate(blog.body.html_safe, length: 170, escape: false) %> <%= link_to "(Continue reading)", blog %></p>
                   </div>
                   <div class="footer">
                           <i class="fa fa-comment fa-fw" aria-hidden="true"></i> <span class="disqus-comment-count" data-disqus-url="<%= blog_url(blog) %>"> Comments</span> 
