@@ -21,11 +21,11 @@
                     <% end %>
                       <p class="profession">Web Developer, Ruby On Rails</p>
                       <h3 class="name"><%= link_to blog.title, blog_path(blog), class: "index-blog-title" %></h3>
-                      <p class="description">Road signs, clothing, cars, furniture and computers are all the result of design. Design is everywhere, which sometimes makes it …(Continue Reading)</p>
+                      <p class="description"><%= truncate(blog.body.html_safe, length: 100, escape: false) %> <%= link_to "(Continue reading)", blog %></p>
                   </div>
                   <div class="footer">
                           <i class="fa fa-comment fa-fw" aria-hidden="true"></i> <span class="disqus-comment-count" data-disqus-url="<%= blog_url(blog) %>"> Comments</span> 
-                          <p class="time"> 4 months Ago</p>
+                          <p class="time"> <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
                   </div>
               </div>
           </div>

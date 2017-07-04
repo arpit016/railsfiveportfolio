@@ -1,5 +1,5 @@
 window.DISQUSWIDGETS = undefined;
-$.getScript("http://codevode.disqus.com/count.js");
+$.getScript("https://codevode.disqus.com/count.js");
 $("#blogs_articles").html("<%= escape_javascript(render partial: 'articles', locals: { blogs: @blogs } ) %>");
 
 $("#pagination").html("<%= escape_javascript(render partial: 'paginate', locals: { blogs: @blogs } ) %>")
