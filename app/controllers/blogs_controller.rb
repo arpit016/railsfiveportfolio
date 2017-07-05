@@ -8,13 +8,13 @@ class BlogsController < ApplicationController
   def index
     if (logged_in?(:site_admin))
       if params[:category].blank?
-        @blogs = Blog.recent.page(params[:page]).per(3)
+        @blogs = Blog.recent.page(params[:page]).per(9)
       else
         if (params[:category] === "all")
-          @blogs = Blog.recent.page(params[:page]).per(3)
+          @blogs = Blog.recent.page(params[:page]).per(9)
         else
           @category = Category.find_by(name: params[:category])
-          @blogs = @category.blogs.recent.page(params[:page]).per(3)
+          @blogs = @category.blogs.recent.page(params[:page]).per(9)
         end
         respond_to do |format|
           format.js
@@ -22,13 +22,13 @@ class BlogsController < ApplicationController
       end
     else
       if params[:category].blank?
-        @blogs = Blog.published.recent.page(params[:page]).per(3)
+        @blogs = Blog.published.recent.page(params[:page]).per(9)
       else
         if (params[:category] === "all")
-          @blogs = Blog.published.recent.page(params[:page]).per(3)
+          @blogs = Blog.published.recent.page(params[:page]).per(9)
         else
           @category = Category.find_by(name: params[:category])
-          @blogs = @category.blogs.published.recent.page(params[:page]).per(3)
+          @blogs = @category.blogs.published.recent.page(params[:page]).per(9)
         end
         respond_to do |format|
           format.js
@@ -58,7 +58,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
+        format.html { redirect_to blogs_path, notice: 'Blog was successfully created.' }
       else
         format.html { render :new } 
       end
@@ -70,7 +70,7 @@ class BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to blogs_path, notice: 'Blog was successfully updated.' }
       else
         format.html { render :edit }
       end

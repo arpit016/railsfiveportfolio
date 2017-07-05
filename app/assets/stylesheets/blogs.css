@@ -422,14 +422,13 @@ a:focus, i:focus{
     color: #3c4858;
     font-family: "Roboto Slab", "Times New Roman", "serif";
 }
-.blog-content p {
+.blog-content p, .blog-content ul {
     font-size: 1.35em;
     line-height: 28px;
     color: #555;
     margin-bottom: 30px;
     font-weight: 300;
     font-family: "Roboto", "Helvetica", "Arial", "sans-serif";
-    text-align: justify;
 }
 
 blockquote .small:before, blockquote footer:before, blockquote small:before{

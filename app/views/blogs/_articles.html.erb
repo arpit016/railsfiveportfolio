@@ -19,7 +19,7 @@
                         <%= link_to '<i class="fa fa-trash fa-lg fa-fw"></i>'.html_safe, blog_path(blog), method: :delete, remote: true, data: { confirm: "Are you sure?" }, :rel => "tooltip", "title" => "Delete" %>
                       </p>
                     <% end %>
-                      <p class="profession">Web Developer, Ruby On Rails</p>
+                      <p class="profession"><%= blog.categories.first.name%>, <%= blog.categories.second.name%> <%= "," + blog.categories.last.name if blog.categories.length > 2 %></p>
                       <h3 class="name"><%= link_to blog.title, blog_path(blog), class: "index-blog-title" %></h3>
                       <p class="description"><%= truncate(blog.body.html_safe, length: 170, escape: false) %> <%= link_to "(Continue reading)", blog %></p>
                   </div>
