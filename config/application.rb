@@ -29,5 +29,7 @@ module CompletePortfolio
     config.assets.precompile += %w( ckeditor/* )
     config.autoload_paths += %w(#{config.root}/app/models/ckeditor)
     
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
+    
   end
 end
