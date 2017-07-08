@@ -3675,7 +3675,6 @@ Created using IcoMoon - icomoon.io
 
   .toggled .bar2 {
     opacity: 0; }
-
   .toggled .bar3 {
     bottom: 6px;
     -webkit-animation: bottombar-x 500ms linear 0s;
@@ -3683,8 +3682,8 @@ Created using IcoMoon - icomoon.io
     animation: bottombar-x 500ms 0s;
     -webkit-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
-
+    animation-fill-mode: forwards;}
+  
   @keyframes topbar-x {
     0% {
       top: 0px;
