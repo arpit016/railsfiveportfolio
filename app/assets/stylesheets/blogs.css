@@ -417,7 +417,7 @@ a:focus, i:focus{
     padding-right: 0px;
 }
 
-.blog-content-title {
+.blog-content .title {
     font-weight: 700;
     color: #3c4858;
     font-family: "Roboto Slab", "Times New Roman", "serif";
