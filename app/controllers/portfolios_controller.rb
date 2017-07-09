@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
     access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
     
     def index
-      @portfolio_items = Portfolio.includes(:technologies, :user)
+      @portfolio_items = Portfolio.recent.includes(:technologies, :user)
       @technologies = Technology.all
     end
     
