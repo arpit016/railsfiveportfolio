@@ -56,6 +56,18 @@
               </div>
             </div>
             <div class = "row">
+              <div class= "col-md-12">
+                <div class="text-center">
+                    <h5 class="title title-up blog-space">Article Subpart </h4>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="input-group form-group-no-border">        
+                  <%= f.text_area :article_part, :class => 'form-control blog-description', :placeholder => 'Article Part', :rows => "5" %>
+                </div>
+              </div>
+            </div>
+            <div class = "row">
               <div class="col-md-12">
                 <div class="input-group form-group-no-border">        
                   <%= f.cktext_area :body, :class => 'form-control blog-description', :placeholder => 'Description', :rows => "20" %>

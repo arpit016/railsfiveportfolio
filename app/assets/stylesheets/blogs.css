@@ -178,7 +178,7 @@ body {
   font-size: 15px;
   margin-top: 20px;
   font-weight: 400;
-  text-align: justify;
+  text-align: inherit;
 }
 .blog .footer {
     border-top: 1px solid #EEEEEE;
@@ -629,17 +629,6 @@ blockquote small {
 .comment-section {
     padding-bottom: 40px;
 }
-
-.blog h3.title {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22.54px;
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-    margin-bottom: 16px;
-    -webkit-margin-after: 16px;
-    
-}
-
 
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
