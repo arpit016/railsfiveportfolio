@@ -49,7 +49,7 @@ $(document).on("ready", function() {
       strings: ["Software development is the closest concept we have to magic.", "It's my goal to hone this magical skill and become a true programming artisan.", "My motto is: Keep Hacking! Keep Learning! "] ,
       typeSpeed: 40,
       loop: true,
-      loopCount: 2,
+      loopCount: 1,
    });
    
    $('.designation').typed({
