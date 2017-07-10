@@ -14,11 +14,11 @@
             </div>
             <div class="portfolio-back">
               <div class="header">
-                  <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                  <h5 class="motto"><%= portfolio_item.title %> - <%= portfolio_item.subtitle %></h5>
               </div>
               <div class="content">
                 <div class="main text-center">
-                    <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
+                    <p class="text-center"><%= technology(portfolio_item)  %></p>
                     <% if user_signed_in? %>
                       <%= link_to '<i class="fa fa-eye fa-lg fa-fw"></i>'.html_safe, "#myModal_#{portfolio_item.id}", { :class => 'link-separator social-links after-login', 'data-toggle' => 'modal', 'rel' => 'tooltip', 'title' => 'Show' } %>
                     <% else %>

@@ -1,6 +1,7 @@
 class PortfoliosController < ApplicationController
     before_action :authenticate_user!, except: [:show, :index]
     before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
+    helper_method :technology
     access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
     
     def index
@@ -46,6 +47,15 @@ class PortfoliosController < ApplicationController
     end
     
     def show
+    end
+    
+    def technology(portfolio_item)
+      @technologies = []
+      @technologies_array = portfolio_item.technologies
+      @technologies_array.each do |tech|
+        @technologies.push(tech.name)
+      end
+      @technologies =  @technologies.split().join(", ")
     end
     
     
